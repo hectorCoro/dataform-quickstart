@@ -1,0 +1,9 @@
+config { type: "incremental" }
+
+-- Use the ref() function to manage dependencies.
+-- Learn more about ref() and other built in functions here: https://cloud.google.com/dataform/docs/dataform-core
+
+
+-- add only fields to use..
+
+SELECT * FROM ${ref("london_bicycles", "cycle_hire")}
