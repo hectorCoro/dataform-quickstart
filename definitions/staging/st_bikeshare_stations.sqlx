@@ -7,6 +7,6 @@
 config {
   type: "declaration",
   database: "bigquery-public-data",
-  schema: "london_bicycles",
-  name: "cycle_hire"
+  schema: "san_francisco",
+  name: "bikeshare_stations"
 }
