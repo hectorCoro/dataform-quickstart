@@ -1,0 +1,9 @@
+config { type: "table" }
+
+SELECT
+    station_id,
+    name,
+    dockcount,
+    installation_date
+
+FROM ${ref("bikeshare_stations")}

@@ -1,0 +1,8 @@
+config { type: "table" }
+
+SELECT
+    start_station_id,
+    CAST(`start_date` AS DATE) AS date,
+    COUNT(start_station_id) AS num_arrives
+FROM ${ref("ods_bikeshare_trips")}
+GROUP BY start_station_id, date

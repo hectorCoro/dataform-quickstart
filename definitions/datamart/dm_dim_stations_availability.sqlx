@@ -1,0 +1,10 @@
+config { type: "table" }
+
+SELECT
+  station_id,
+  CAST(`time` AS DATE) AS date,
+  TIME_TRUNC(CAST(`time` AS TIME), HOUR) AS hour,
+  SUM(docks_available) / SUM(docks_available + bikes_available) AS docks_availability
+FROM ${ref("ods_bikeshare_status")}
+GROUP BY station_id, date, hour
+ORDER BY station_id, date, hour

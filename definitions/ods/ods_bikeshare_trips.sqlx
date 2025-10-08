@@ -1,0 +1,16 @@
+config { type: "table" }
+
+SELECT
+    trip_id,
+    start_station_id,
+    start_station_name,
+    start_date,
+    end_station_id,
+    end_station_name,
+    end_date,
+    bike_number,
+    subscriber_type,
+    duration_sec,
+    --DATETIME_DIFF(end_date, start_date, MINUTE) AS duration_min
+
+FROM ${ref("bikeshare_trips")}
