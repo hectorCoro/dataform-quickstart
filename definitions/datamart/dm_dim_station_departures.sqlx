@@ -4,5 +4,5 @@ SELECT
     end_station_id,
     CAST(`end_date` AS DATE) AS date,
     COUNT(end_station_id) AS num_departures
-FROM ${ref("ods_bikeshare_trips")}
+FROM ods.ods_bikeshare_trips
 GROUP BY end_station_id, date
