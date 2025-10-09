@@ -1,12 +1,6 @@
--- This is an example SQLX file to help you learn the basics of Dataform.
--- Visit https://cloud.google.com/dataform/docs/sql-workflows for more information on how to configure your SQL workflow.
-
--- You can delete this file, then commit and push your changes to your repository when you are ready.
-
--- Config blocks allow you to configure, document, and test your data assets.
 config {
-  type: "declaration",
-  database: "bigquery-public-data",
-  schema: "san_francisco",
-  name: "bikeshare_stations"
+    type: "declaration",
+    database: "bigquery-public-data",
+    schema: "san_francisco",
+    name: "bikeshare_stations"
 }

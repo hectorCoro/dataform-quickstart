@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    schema: "dim"
+}
+
+SELECT
+    trip_id,
+    start_station_id,
+    end_station_id
+FROM ${ref("ods_bikeshare_trips")}

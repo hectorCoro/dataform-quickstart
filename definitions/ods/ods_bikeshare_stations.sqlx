@@ -1,0 +1,12 @@
+config { 
+    type: "table",
+    schema: "ods"
+}
+
+SELECT
+    station_id,
+    name,
+    dockcount,
+    installation_date
+
+FROM ${ref("bikeshare_stations")}

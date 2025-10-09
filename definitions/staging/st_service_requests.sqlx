@@ -1,6 +1,0 @@
-config {
-  type: "declaration",
-  database: "bigquery-public-data",
-  schema: "san_francisco",
-  name: "311_service_requests"
-}

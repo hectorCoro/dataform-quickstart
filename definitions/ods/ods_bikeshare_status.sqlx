@@ -1,0 +1,12 @@
+config {
+    type: "table",
+    schema: "ods"
+}
+
+SELECT
+  station_id,
+  CAST(`time` AS DATE) AS date,
+  SUM(bikes_available) AS bikes_available,
+  SUM(docks_available) AS docks_available
+FROM ${ref("bikeshare_status")}
+GROUP BY station_id, date
