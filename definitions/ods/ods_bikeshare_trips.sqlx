@@ -13,7 +13,5 @@ SELECT
     end_date,
     bike_number,
     subscriber_type,
-    duration_sec,
-    --DATETIME_DIFF(end_date, start_date, MINUTE) AS duration_min
-
+    duration_sec
 FROM ${ref("bikeshare_trips")}

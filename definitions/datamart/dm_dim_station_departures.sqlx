@@ -1,8 +1,11 @@
-config { type: "table" }
+config {
+    type: "table",
+    schema: "dm"
+}
 
 SELECT
     end_station_id,
     CAST(`end_date` AS DATE) AS date,
     COUNT(end_station_id) AS num_departures
-FROM ods.ods_bikeshare_trips
+FROM ${ref("ods_bikeshare_trips")}
 GROUP BY end_station_id, date

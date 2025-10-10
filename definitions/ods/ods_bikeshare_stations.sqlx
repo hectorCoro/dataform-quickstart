@@ -8,5 +8,4 @@ SELECT
     name,
     dockcount,
     installation_date
-
 FROM ${ref("bikeshare_stations")}
