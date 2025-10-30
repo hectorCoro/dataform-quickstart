@@ -1,6 +1,6 @@
 config { 
     type: "table",
-    schema: "ods"
+    schema: constants.ODS_SCH
 }
 
 SELECT
@@ -8,4 +8,4 @@ SELECT
     name,
     dockcount,
     installation_date
-FROM ${ref("bikeshare_stations")}
+FROM ${ref("st_bikeshare_stations")}

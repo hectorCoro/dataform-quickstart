@@ -1,0 +1,6 @@
+config {
+    type: "declaration",
+    database: constants.ORIGIN_DB,
+    schema: constants.ORIGIN_SCH,
+    name: "bikeshare_trips"
+}

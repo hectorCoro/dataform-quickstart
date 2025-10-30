@@ -1,6 +1,6 @@
 config {
-    type: "declaration",
-    database: "bigquery-public-data",
-    schema: "san_francisco",
-    name: "bikeshare_trips"
+    type: "table",
+    schema: constants.STG_SCH
 }
+
+SELECT * FROM ${ref("bikeshare_trips")}

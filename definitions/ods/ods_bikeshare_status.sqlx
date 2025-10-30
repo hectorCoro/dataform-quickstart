@@ -1,6 +1,6 @@
 config {
     type: "table",
-    schema: "ods"
+    schema: constants.ODS_SCH
 }
 
 SELECT
@@ -8,5 +8,5 @@ SELECT
   CAST(`time` AS DATE) AS date,
   SUM(bikes_available) AS bikes_available,
   SUM(docks_available) AS docks_available
-FROM ${ref("bikeshare_status")}
+FROM ${ref("st_bikeshare_status")}
 GROUP BY station_id, date

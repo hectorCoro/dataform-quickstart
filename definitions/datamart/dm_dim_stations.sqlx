@@ -1,0 +1,10 @@
+config {
+    type: "table",
+    schema: constants.DM_SCH
+}
+
+SELECT
+    station_id,
+    name,
+    dockcount
+FROM ${ref("ods_bikeshare_stations")}
