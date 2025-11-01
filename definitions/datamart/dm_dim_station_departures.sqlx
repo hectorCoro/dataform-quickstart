@@ -1,6 +1,6 @@
 config {
     type: "table",
-    schema: "dm"
+    schema: constants.DM_SCH
 }
 
 SELECT
